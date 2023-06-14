@@ -1,0 +1,16 @@
+{{ define "item" }}
+<a href="/items/{{ .ID }}">
+  <div class='item-image'>
+    <img src="/assets/images/{{ .Tag }}.jpg" />
+  </div>
+
+  <div class='item-text'>
+    <div class='item-name'>
+      {{ .Name }}
+    </div>
+    <div class='item-description'>
+      {{ .Title }}
+    </div>
+  </div>
+</a>
+{{ end }}

@@ -1,0 +1,16 @@
+{{ define "items_index" }}
+<!DOCTYPE html>
+<html>
+  {{ template "header" }}
+
+  <body>
+    {{ template "navbar" . }}
+
+    <div class='main-content'>
+      <a href="/items/new">New Item</a>
+      <br/>
+      {{ template "item_list" . }}
+    </div>
+  </body>
+</html>
+{{ end }}

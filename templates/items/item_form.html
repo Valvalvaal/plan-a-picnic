@@ -1,0 +1,10 @@
+{{ define "item_form" }}
+  <label>Name:</label><br />
+  <input type="text" name="name" value='{{printf "%s" .Name}}'>
+  <br/><br/>
+  <label>Title:</label><br />
+  <textarea name="title">{{printf "%s" .Title}}</textarea>
+  <br/><br/>
+  <input type="submit">
+  <br/><br/>
+{{ end }}

@@ -1,0 +1,10 @@
+{{ define "item_edit" }}
+  <h1>Edit Item</h1>
+  <h2>{{printf "%s" .Item.Name}}</h2>
+
+  <form action='{{printf "/items/%d" .Item.ID}}' method="POST">
+    <input type="hidden" name='_method' value='update'>
+    {{ template "item_form" .Item }}
+  </form>
+{{ end }}
+

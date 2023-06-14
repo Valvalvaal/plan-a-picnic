@@ -1,0 +1,13 @@
+{{ define "item_list" }}
+<h1>Items</h1>
+
+<div class='items'>
+  <ul class='item-list'>
+    {{ range $item := .Items }}
+    <li class='item-link'>
+      {{ template "item" $item }}
+    </li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}

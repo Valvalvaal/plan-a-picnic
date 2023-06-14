@@ -1,0 +1,7 @@
+{{ define "item_new" }}
+  <h1>New Item</h1>
+
+  <form action="/items" method="POST">
+    {{ template "item_form" .Item }}
+  </form>
+{{ end }}

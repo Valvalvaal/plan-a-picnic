@@ -48,6 +48,7 @@ func main() {
 		v1.GET("/contributions/", readAllContributions)
 		v1.PUT("/contributions/:contribution_id", updateContribution)
 		v1.DELETE("/contributions/:contribution_id", deleteContribution)
+		// TODO: Crear pruebas en postman, implementar delete, read all contibutions
 
 	}
 

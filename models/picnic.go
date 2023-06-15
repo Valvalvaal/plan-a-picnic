@@ -32,8 +32,8 @@ CREATE TABLE IF NOT EXISTS users_picnics (
   id       INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
   user_id  INTEGER,
   picnic_id INTEGER,
-  FOREIGN KEY (user_id) REFERENCES users(id),
-  FOREIGN KEY (picnic_id) REFERENCES picnics(id)
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+  FOREIGN KEY (picnic_id) REFERENCES picnics(id) ON DELETE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS food_items (
@@ -51,9 +51,9 @@ CREATE TABLE IF NOT EXISTS contributions (
 	picnic_id    INTEGER,
 	food_item_id INTEGER,
 	quantity   INTEGER NOT NULL,
-	FOREIGN KEY (user_id) REFERENCES users(id),
-  	FOREIGN KEY (picnic_id) REFERENCES picnics(id),
-	FOREIGN KEY (food_item_id) REFERENCES food_items(id)
+	FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+  	FOREIGN KEY (picnic_id) REFERENCES picnics(id) ON DELETE CASCADE,
+	FOREIGN KEY (food_item_id) REFERENCES food_items(id) ON DELETE CASCADE
 );
 
 `
